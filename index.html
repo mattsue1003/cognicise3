@@ -116,7 +116,7 @@
                         Tone.Destination.volume.value = 0;
                         
                         // 創建一個測試音符以確保音頻上下文已解鎖
-                        const testSynth = new Tone.MembraneSynth({
+                        const testSynth = new Tone.Synth({
                             envelope: {
                                 attack: 0.001,
                                 decay: 0.1,
@@ -151,7 +151,7 @@
                     if (!audioInitialized) {
                         await initializeAudio();
                     } else {
-                        const testSynth = new Tone.MembraneSynth({
+                        const testSynth = new Tone.Synth({
                             envelope: {
                                 attack: 0.001,
                                 decay: 0.2,
@@ -221,7 +221,7 @@
                     }
                     
                     // 創建合成器
-                    synRef.current = new Tone.MembraneSynth({
+                    synRef.current = new Tone.Synth({
                         envelope: {
                             attack: 0.001,
                             decay: 0.1,
